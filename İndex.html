@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Koyu Mod</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            height: 80%;
+            background-color: #181818;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .header {
+            background: linear-gradient(135deg, #7a4b8e, #9b5f94);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+        }
+        .header h2 {
+            margin: 0;
+            color: white;
+            font-size: 24px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        }
+        .sub-header {
+            font-size: 14px;
+            color: #ddd;
+            margin: 10px 0;
+        }
+        .link {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .link a {
+            color: #9b5f94;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .link a:hover {
+            color: #7a4b8e;
+        }
+        .chat-area {
+            flex-grow: 1;
+            padding: 10px;
+            overflow-y: auto;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+        .input-area {
+            padding: 10px;
+            display: flex;
+            border-top: 1px solid #333;
+            justify-content: space-between;
+        }
+        .input-area input {
+            width: 85%;
+            padding: 10px;
+            background-color: #333;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+        }
+        .input-area button {
+            background: linear-gradient(135deg, #7a4b8e, #9b5f94);
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+        .input-area button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+        }
+        .maintenance-message {
+            background: linear-gradient(135deg, #7a4b8e, #9b5f94);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+            margin-top: 10px;
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h2>F4CKING AI</h2>
+        </div>
+        <div class="sub-header">
+          <p>Merhaba, zavallı insan. Ne tür karanlık planlar yapmak istersin bugün?</p>
+        </div>
+        <div class="link">
+            <a href="https://www.sitenizinlinki.com" target="_blank">Sitemizi ziyaret et</a>
+        </div>
+        <div class="chat-area">
+            <!-- Mesajlar burada gösterilecek -->
+        </div>
+        <div class="maintenance-message" id="maintenanceMessage">
+            Sunucu bakıma girdi!
+        </div>
+        <div class="input-area">
+            <input type="text" id="messageInput" placeholder="Mesaj yazın...">
+            <button onclick="sendMessage()">Gönder</button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var input = document.getElementById("messageInput").value;
+            if (input.trim() !== "") {
+                // Bakım mesajını göster
+                document.getElementById("maintenanceMessage").style.display = "block";
+                // Girdi kutusunu temizle
+                document.getElementById("messageInput").value = "";
+            }
+        }
+    </script>
+
+</body>
+</html>
